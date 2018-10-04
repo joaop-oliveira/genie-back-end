@@ -4,12 +4,8 @@ import { goTo } from 'components';
 import gridColumns from './gridColumns';
 import filterOptions from './filterOptions';
 
-type Props = {
-  #{TYPE_PROPS}
-};
-type State = {
-  #{TYPE_STATE}
-}
+type Props = #{TYPE_PROPS};
+type State = #{TYPE_STATE};
 
 class #{FILE_NAME} extends React.Component <Props, State> {
 
