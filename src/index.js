@@ -1,5 +1,6 @@
 const app = require('express')();
 const morgan = require('morgan');
+const bodyParser = require('body-parser');
 const server = require('http').Server(app);
 const io = require('socket.io')(server);
 
@@ -17,6 +18,7 @@ const logger = morgan((tokens, req, res) => [
   JSON.stringify(req.query, null, 2),
 ].join(' '));
 
+app.use(bodyParser.json());
 app.use(logger);
 
 app.use('/api', apiRouter);
